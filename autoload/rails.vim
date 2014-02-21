@@ -1190,6 +1190,7 @@ function! s:make(bang, args, ...)
 endfunction
 
 function! s:Rake(bang,lnum,arg)
+  silent !clear
   let self = rails#app()
   let lnum = a:lnum < 0 ? 0 : a:lnum
   let old_makeprg = &l:makeprg
